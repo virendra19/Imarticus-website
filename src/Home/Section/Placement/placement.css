@@ -1,0 +1,42 @@
+.left_placement_content_container {
+    position: relative;
+    width: 96%;
+    background: url(https://cdn.pegasus.imarticus.org/location/OPFAw.webp);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    background-position: 100% 0rem;
+    background-size: cover;
+    height: 47vh;
+
+}
+
+.left_placement_content_container p {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+    text-transform: capitalize;
+    color: var(--white-color);
+    padding-top: 104px;
+    width: 298px;
+}
+
+.right_placement_content_container {
+    width: 90%;
+}
+
+.right_placement_content_container p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--primary-color);
+    padding-bottom: 16px;
+}
+
+.right_placement_content_container h3 {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    color: #2e87c8;
+    padding-bottom: 16px;
+}

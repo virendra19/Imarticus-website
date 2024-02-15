@@ -1,0 +1,136 @@
+.location_tabs_container {
+    margin: 60px auto;
+}
+
+.location_tabs_container h2 {
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+    text-align: center;
+    color: var(--black-color);
+    padding-bottom: 40px;
+}
+
+.pills_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.pills_container p {
+    height: 40px;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    cursor: pointer;
+
+
+}
+
+.pills_container p:hover {
+    background: var(--primary-color);
+    color: var(--white-color);
+}
+
+.request_form_container {
+    width: 90%;
+    background: var(--white-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    border-radius: 8px;
+    padding: 48px 40px 40px;
+}
+
+.request_form_container p:first-child {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: capitalize;
+    color: var(--black-color);
+    text-align: center;
+    padding-bottom: 32px;
+}
+
+.form_container {
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form_container input {
+    width: 100%;
+    height: 48px;
+    background: rgba(33, 42, 57, .06);
+    border-radius: 4px;
+    border: none;
+    padding: 8px 16px;
+}
+
+.phone_number_select_container {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.phone_number_select_container select {
+    height: 48px;
+    background: rgba(33, 42, 57, .06);
+    border-radius: 4px;
+    width: 32% !important;
+    border: none;
+    padding: 8px 32px 8px 8px;
+    background-image: url(https://cdn.pegasus.imarticus.org/thank_you/chevron-up.svg) !important;
+    background-position: 98% !important;
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-decoration: none !important;
+    color: var(--black-color) !important;
+}
+
+.terms_submit_container {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 0;
+}
+
+.form_container select {
+    width: 100%;
+    height: 48px;
+    background: rgba(33, 42, 57, .06);
+    border-radius: 4px;
+    border: none;
+    padding: 8px 40px 8px 8px;
+    background-image: url(https://cdn.pegasus.imarticus.org/thank_you/chevron-up.svg) !important;
+    background-position: 99% !important;
+    background-repeat: no-repeat;
+    -webkit-appearance: none;
+}
+
+.terms_submit_container div {
+    color: rgba(60, 72, 82, 0.75);
+    font-size: 16px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.terms_submit_container div input {
+    width: 20px;
+    height: 20px;
+}
+
+.terms_submit_container button {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--white-color);
+    width: 166px;
+    height: 56px;
+    background: var(--primary-color);
+    border-radius: 8px;
+    border: none;
+}

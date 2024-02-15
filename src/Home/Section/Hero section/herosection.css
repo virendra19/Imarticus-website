@@ -1,0 +1,68 @@
+.main_hero_section_container {
+    background: url(https://webcdn.imarticus.org/63c4e1c…-a20fddf…) center bottom no-repeat, linear-gradient(90deg, rgb(18, 70, 105) 0%, rgb(12, 133, 140) 100%);
+    ;
+    /* min-height: 100vh; */
+}
+
+.inside_hero_section_container {
+    display: flex;
+    color: var(--white-color);
+    padding: 60px 0;
+    position: relative;
+    align-items: center;
+}
+
+.left_hero_section_content_container {
+    width: 50%;
+}
+
+.left_side_content_container {}
+
+.left_side_content_container p:first-child {
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 40px;
+    color: #fff;
+    padding-bottom: 8px;
+    padding-top: 24px;
+    text-transform: capitalize;
+}
+
+.left_side_content_container h1 {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 66px;
+    text-transform: capitalize;
+    color: #fff;
+    padding-bottom: 16px;
+}
+
+.left_side_content_container button {
+    background: #4dc1b8;
+    border-radius: 8px;
+    width: 190px;
+    height: 56px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+    border: none;
+    margin-bottom: 24px;
+    z-index: 1;
+}
+
+.right_hero_section_content_container{
+    display: flex;
+    width: 50%;
+}
+
+.right_hero_section_content_container div{
+    margin: 0 0 0 auto;
+}
+
+.country_icon{
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+}

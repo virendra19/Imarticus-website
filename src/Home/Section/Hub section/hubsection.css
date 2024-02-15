@@ -1,0 +1,13 @@
+.title_desc_hub_section_container{
+    color: var(--black-color);
+    width: 90%;
+}
+.title_desc_hub_section_container h2{
+    font-weight: 700;
+    font-size: 34px;
+    line-height: 40px;
+    color: #3c4852;
+    padding-bottom: 16px;
+    text-transform: capitalize;
+    width: 370px;
+}
