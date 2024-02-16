@@ -47,6 +47,7 @@
 .sidebar_title_arrow_container p {
     padding: 3% 6%;
     display: flex;
+    cursor: pointer;
     align-items: center;
     outline: none;
     transition: all .3s;

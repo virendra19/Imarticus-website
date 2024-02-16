@@ -65,7 +65,7 @@ export default function Navbar() {
         
             <button
               className="all_programs_btn"
-              onClick={handleOpenExpandAllPrograms}
+              onMouseEnter={handleOpenExpandAllPrograms}
             >
               All Programs <i className="fa fa-angle-down" aria-hidden="true" />
             </button>
@@ -73,6 +73,7 @@ export default function Navbar() {
           <OutsideClickHandler
             onOutsideClick={() => {
               setOpenProgramsDropDown(false);
+              
             }}
           >
           {openProgramsDropDown && (
