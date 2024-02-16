@@ -20,13 +20,13 @@
     width: 100%;
 }
 
-.logo_all_programs_btn_container button:last-child {
+.all_programs_btn{
+    cursor: pointer;
     text-decoration: none;
     font-size: 15px;
     font-weight: 600;
     display: flex;
     align-items: center;
-    background-color: var(--primary-color);
     height: 48px;
     width: 171px;
     border-radius: 8px;
@@ -35,14 +35,25 @@
     color: #fff;
     margin-left: 40px;
     gap: 10px;
+    position: relative;
+    background-color: var(--primary-color);
 }
-
+.activeStyle{
+    background: #fff;
+    margin: 0 0 0 20px;
+    border-radius: 20px 0 0 20px;
+}
 .navs_link_container {
     display: flex;
     align-items: center;
     gap: 20px;
 }
-
+.job_icon_title_container{
+    background-color: transparent;
+    display: flex;
+    gap:10px;
+    align-items: center;
+}
 .navs_link_container ul {
     display: flex;
     align-items: center;
@@ -119,6 +130,78 @@
     cursor: pointer;
 }
 
+.sidebar_rightside_container{
+    position: absolute;
+    top: 9%;
+    left: 10%;
+    z-index: 1;
+    display: flex;
+    background-color: var(--white-color);
+    width: 85%;
+    overflow: hidden;
+    height: 80%;
+    overflow-y: scroll;
+}
+.programs_sidebar_container{
+    background: #d1f0f3;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+
+}
+.programs_sidebar_container > div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 23px 10px 15px;
+    width: 100%;
+    color: var(--primary-color);
+    margin: 5px 0;
+    cursor: pointer;
+}
+.rightside_container{
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: row;
+    width: 69%;
+    flex-wrap: wrap;
+    gap: 22px;
+    padding: 15px 30px;
+}
+.programs_title_img_content_container{
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.programs_title_img_content_container > p{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 10px 0;
+
+}
+.pragrams_logo_title_container{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+
+}
+.pragrams_logo_title_container img{
+    width: 50px;
+    
+}
+.pragrams_logo_title_container p{
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+
 @media (max-width:767px) {
     .menu_logo_container {}
 
@@ -177,7 +260,7 @@
         margin: 0 0 0 auto;
     }
 
-    .logo_all_programs_btn_container button:last-child {
+    .all_programs_btn{
         width: fit-content;
         height: auto;
         font-size: 13px;
