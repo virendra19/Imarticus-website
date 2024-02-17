@@ -5,7 +5,7 @@ import logoIcon from "../../assets/logo.svg";
 import whatsAppIcon from "../../assets/whatsappicon.svg";
 import { Link } from "react-router-dom";
 import jobIcon from "../../assets/job.svg";
-import imarticusLogo from "../../assets/imarticus-logo2.webp";
+// import imarticusLogo from "../../assets/imarticus-logo2.webp";
 import ProgramType from "./ProgramType";
 
 export default function Navbar() {
@@ -21,6 +21,14 @@ export default function Navbar() {
   const [showDropDown, setShowDropDown] = useState(false);
   const [openProgramsDropDown, setOpenProgramsDropDown] = useState(false);
   const [activeColor, setActiveColor] = useState(false);
+
+  const dropdownItems = [
+    { text: "About Us", link: "/about" },
+    { text: "Courses", link: "/courses" },
+    { text: "Contact", link: "/contact" },
+    { text: "Blog", link: "/blog" },
+
+  ];
 
   useEffect(() => {
     const handleResize = () => {
@@ -62,55 +70,55 @@ export default function Navbar() {
               <img src={logoIcon} alt="logo" loading="lazy" />
             </div>
           </div>
-        
-            <button
-              className="all_programs_btn"
-              onMouseEnter={handleOpenExpandAllPrograms}
-            >
-              All Programs <i className="fa fa-angle-down" aria-hidden="true" />
-            </button>
-          
+
+          <button
+            className="all_programs_btn"
+            onMouseEnter={handleOpenExpandAllPrograms}
+          >
+            All Programs <i className="fa fa-angle-down" aria-hidden="true" />
+          </button>
+
           <OutsideClickHandler
             onOutsideClick={() => {
               setOpenProgramsDropDown(false);
-              
+
             }}
           >
-          {openProgramsDropDown && (
-            <div className="sidebar_rightside_container">
-              <div className="programs_sidebar_container">
-                {programsTitles?.map((item, index) => {
-                  return (
-                    <div
-                      key={index}
-                      style={{ background: "transparent" }}
-                      className={
-                        activeColor
-                          ? "activeStyle all_programs_btn"
-                          : "all_programs_btn"
-                      }
-                      onClick={handleActiveTab}
-                    >
-                      <div className="job_icon_title_container">
-                        <img src={jobIcon} alt="jobIcon" loading="lazy" />
-                        {item}
+            {openProgramsDropDown && (
+              <div className="sidebar_rightside_container">
+                <div className="programs_sidebar_container">
+                  {programsTitles?.map((item, index) => {
+                    return (
+                      <div
+                        key={index}
+                        style={{ background: "transparent" }}
+                        className={
+                          activeColor
+                            ? "activeStyle all_programs_btn"
+                            : "all_programs_btn"
+                        }
+                        onClick={handleActiveTab}
+                      >
+                        <div className="job_icon_title_container">
+                          <img src={jobIcon} alt="jobIcon" loading="lazy" />
+                          {item}
+                        </div>
+                        <i className="fa fa-angle-right" aria-hidden="true" />
                       </div>
-                      <i className="fa fa-angle-right" aria-hidden="true" />
-                    </div>
-                  );
-                })}
+                    );
+                  })}
+                </div>
+                <div className="rightside_container">
+                  {[1, 1, 1, 1]?.map((item, index) => {
+                    return (
+                      <React.Fragment key={index}>
+                        <ProgramType />
+                      </React.Fragment>
+                    );
+                  })}
+                </div>
               </div>
-              <div className="rightside_container">
-                {[1, 1, 1, 1]?.map((item, index) => {
-                  return (
-                    <React.Fragment key={index}>
-                      <ProgramType />
-                    </React.Fragment>
-                  );
-                })}
-              </div>
-            </div>
-          )}
+            )}
           </OutsideClickHandler>
         </div>
         {isMobile ? (
@@ -125,10 +133,7 @@ export default function Navbar() {
                     <Link>Career services</Link>
                   </li>
                   <li>
-                    <div
-                      className="dropdown_container"
-                      onClick={handleShowDropDown}
-                    >
+                    <div className="dropdown_container" onClick={handleShowDropDown}>
                       Discover{" "}
                       <i
                         className={
@@ -139,11 +144,12 @@ export default function Navbar() {
                     </div>
                     {showDropDown && (
                       <div className="opt_container">
-                        {[1, 1, 1, 1, 1].map((item, index) => {
-                          return <Link key={index}>Item {index + 1}</Link>;
+                        {dropdownItems.map((item, index) => {
+                          return <Link key={index} to={item.link}>{item.text}</Link>
                         })}
                       </div>
                     )}
+
                   </li>
                   <li>
                     <Link>For Enterprise</Link>
@@ -171,10 +177,7 @@ export default function Navbar() {
                 <Link>Career services</Link>
               </li>
               <li>
-                <div
-                  className="dropdown_container"
-                  onClick={handleShowDropDown}
-                >
+                <div className="dropdown_container" onClick={handleShowDropDown}>
                   Discover{" "}
                   <i
                     className={
@@ -185,11 +188,12 @@ export default function Navbar() {
                 </div>
                 {showDropDown && (
                   <div className="opt_container">
-                    {[1, 1, 1, 1, 1].map((item, index) => {
-                      return <Link key={index}>Item {index + 1}</Link>;
+                    {dropdownItems.map((item, index) => {
+                      return <Link key={index} to={item.link}>{item.text}</Link>
                     })}
                   </div>
                 )}
+
               </li>
               <li>
                 <Link>For Enterprise</Link>
